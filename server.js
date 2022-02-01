@@ -44,7 +44,7 @@ const PORT = (process.env.PORT || 3001)
 
 console.log(PORT)
 
-// mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/lofiStudyRoom_db');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/lofiStudyRoom_db');
 const io = require('socket.io')(PORT)
 
 // cors: {
