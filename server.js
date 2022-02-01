@@ -38,8 +38,11 @@ app.get('*', (req, res) => res.sendFile(join(__dirname, 'client', 'build', 'inde
 
 // const PORT = (process.env.PORT || 3001)
 
+const SERVER = app.listen(process.env.PORT || 43962)
+
+
 require('./db')
-  .then(() => app.listen(process.env.PORT || 43962))
+  .then(() => SERVER)
   .catch(err => console.log(err))
 
 // mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/lofiStudyRoom_db')
@@ -47,7 +50,7 @@ require('./db')
 //   console.log('connected')
 // })
 
-const io = require('socket.io')(43962, {
+const io = require('socket.io')(SERVER, {
   cors: {
     origin: "https://stark-lowlands-08551.herokuapp.com",
       methods: ["GET", "POST"]
