@@ -43,11 +43,9 @@ app.get('*', (req, res) => res.sendFile(join(__dirname, 'client', 'build', 'inde
 
 // mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/lofiStudyRoom_db');
 const SocketIO = require('socket.io')
-const PORT = process.env.PORT || 3000;
-const server = app.listen(PORT);
-
-
+const server = require('http').createServer(app);
 const io = SocketIO.listen(server)
+server.listen(process.env.PORT || 3000);
 
 
 
