@@ -36,8 +36,11 @@ app.use(require('./routes'))
 
 app.get('*', (req, res) => res.sendFile(join(__dirname, 'client', 'build', 'index.html')))
 
+const Port = (process.env.PORT || 3001)
+
 require('./db')
-  .then(() => app.listen(process.env.PORT || 3001))
+  .then(() => app.listen(Port))
+  console.log(Port)
   .catch(err => console.log(err))
 
 
