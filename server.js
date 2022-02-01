@@ -41,18 +41,16 @@ const PORT = (process.env.PORT || 3001)
 require('./db')
   .then(() => app.listen(PORT))
   .catch(err => console.log(err))
-  
-  console.log(PORT)
+
+console.log(PORT)
 
 // mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/lofiStudyRoom_db');
-const io = require('socket.io')(8080, {
-  cors: {
-    origin: "https://stark-lowlands-08551.herokuapp.com",
-    methods: ["GET", "POST"]
-  }
-})
+const io = require('socket.io')(PORT)
 
-
+// cors: {
+//   origin: "https://stark-lowlands-08551.herokuapp.com",
+//     methods: ["GET", "POST"]
+// }
 
 // const server = require('http').createServer(app);
 // const io = SocketIO.listen(server)
