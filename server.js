@@ -12,7 +12,7 @@ const mongoose = require('mongoose')
 const app = express()
 const { User, Document } = require('./models')
 
-app.use(express.static(join(__dirname, 'client', 'public')))
+app.use(express.static(join(__dirname, 'client', 'build')))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
