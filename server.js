@@ -36,9 +36,9 @@ app.use(require('./routes'))
 
 app.get('*', (req, res) => res.sendFile(join(__dirname, 'client', 'build', 'index.html')))
 
-require('./db')
-  .then(() => app.listen(process.env.PORT || 3001))
-  .catch(err => console.log(err))
+// require('./db')
+//   .then(() => app.listen(process.env.PORT || 3001))
+//   .catch(err => console.log(err))
 
 
 // mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/lofiStudyRoom_db');
