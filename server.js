@@ -63,6 +63,7 @@ const defaultValue = ''
 
 // listening for text changes
 io.on('connection', socket => {
+  console.log('Client connected')
   socket.on('get-document', async documentId => {
     // capturing function to find document by Id
     const document = await findOrCreateDocument(documentId)
