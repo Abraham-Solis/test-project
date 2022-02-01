@@ -38,9 +38,9 @@ app.get('*', (req, res) => res.sendFile(join(__dirname, 'client', 'build', 'inde
 
 const PORT = (process.env.PORT || 3001)
 
-require('./db')
-  .then(() => app.listen(PORT))
-  .catch(err => console.log(err))
+// require('./db')
+//   .then(() => app.listen(PORT))
+//   .catch(err => console.log(err))
 
 console.log(PORT)
 
