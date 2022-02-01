@@ -42,15 +42,20 @@ require('./db')
 
 
 // mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/lofiStudyRoom_db');
+const SocketIO = require('socket.io')
+const PORT = process.env.PORT || 3000;
+const server = app.listen(PORT);
 
 
-
-const io = require("socket.io")({
+const io = SocketIO.listen(server)({
   cors: {
     origin: "https://stark-lowlands-08551.herokuapp.com",
     methods: ["GET", "POST"]
   }
 })
+
+
+
 
 const defaultValue = ''
 
