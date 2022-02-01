@@ -36,21 +36,24 @@ app.use(require('./routes'))
 
 app.get('*', (req, res) => res.sendFile(join(__dirname, 'client', 'build', 'index.html')))
 
-const PORT = (process.env.PORT || 3001)
+// const PORT = (process.env.PORT || 3001)
 
-// require('./db')
-//   .then(() => app.listen(PORT))
-//   .catch(err => console.log(err))
+require('./db')
+  .then(() => app.listen(process.env.PORT || 3001))
+  .catch(err => console.log(err))
 
-console.log(PORT)
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/lofiStudyRoom_db')
+.then(() =>{
+  console.log('connected')
+})
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/lofiStudyRoom_db');
-const io = require('socket.io')(PORT)
+const io = require('socket.io')(8080, {
+  cors: {
+    origin: "https://stark-lowlands-08551.herokuapp.com",
+      methods: ["GET", "POST"]
+  }
+})
 
-// cors: {
-//   origin: "https://stark-lowlands-08551.herokuapp.com",
-//     methods: ["GET", "POST"]
-// }
 
 // const server = require('http').createServer(app);
 // const io = SocketIO.listen(server)
