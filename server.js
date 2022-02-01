@@ -36,13 +36,13 @@ app.use(require('./routes'))
 
 app.get('*', (req, res) => res.sendFile(join(__dirname, 'client', 'build', 'index.html')))
 
-const Port = (process.env.PORT || 3001)
+const PORT = (process.env.PORT || 3001)
 
 require('./db')
-  .then(() => app.listen(Port))
-  console.log(Port)
+  .then(() => app.listen(PORT))
   .catch(err => console.log(err))
-
+  
+  console.log(PORT)
 
 // mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/lofiStudyRoom_db');
 const io = require('socket.io')(8080, {
