@@ -47,12 +47,17 @@ const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT);
 
 
-const io = SocketIO.listen(server)({
-  cors: {
-    origin: "https://stark-lowlands-08551.herokuapp.com",
-    methods: ["GET", "POST"]
-  }
-})
+const io = SocketIO.listen(server)
+
+
+
+
+// ({
+//   cors: {
+//     origin: "https://stark-lowlands-08551.herokuapp.com",
+//     methods: ["GET", "POST"]
+//   }
+// })
 
 
 
