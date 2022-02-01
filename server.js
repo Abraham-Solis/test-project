@@ -42,10 +42,10 @@ require('./db')
   .then(() => app.listen(process.env.PORT || 3001))
   .catch(err => console.log(err))
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/lofiStudyRoom_db')
-.then(() =>{
-  console.log('connected')
-})
+// mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/lofiStudyRoom_db')
+// .then(() =>{
+//   console.log('connected')
+// })
 
 const io = require('socket.io')(8080, {
   cors: {
