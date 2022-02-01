@@ -47,7 +47,7 @@ require('./db')
 //   console.log('connected')
 // })
 
-const io = require('socket.io')(8080, {
+const io = require('socket.io')(3001, {
   cors: {
     origin: "https://stark-lowlands-08551.herokuapp.com",
       methods: ["GET", "POST"]
