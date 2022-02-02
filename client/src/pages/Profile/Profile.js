@@ -66,7 +66,7 @@ const Profile = () => {
 
 
 
-{/* 
+
       {
         noteState.notes.map(note =>
           <>
@@ -76,15 +76,13 @@ const Profile = () => {
 
             <a target="_blank" rel="noopener noreferrer" href={note.body}><ButtonComponent name={'Notes'} /> </a>
 
-            <br />
-            <br />
 
 
 
-            this is how you need to write functions that take in parameters onClick
+            {/* this is how you need to write functions that take in parameters onClick */}
           </>
         )
-      } */}
+      }
     </>
 
   )
