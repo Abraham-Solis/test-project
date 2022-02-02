@@ -40,7 +40,7 @@ const Navigation = () => {
           <Offcanvas.Body>
             <Nav className="justify-content-end flex-grow-1 pe-3">
               <Nav.Link className="nav-links" href="#action2">Profile</Nav.Link>
-              <Nav.Link className="nav-links" href="#action2">Background</Nav.Link>
+              <Nav.Link className="nav-links" href="#action2">Logout</Nav.Link>
               <Nav.Link className="nav-links" href="/contact">Contanct</Nav.Link>
             </Nav>
             <Form className="d-flex">
