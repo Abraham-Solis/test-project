@@ -54,7 +54,7 @@ const App = () => {
       <div className="App" id={load ? "no-scroll" : "scroll"}>
       <Routes> 
         <Route path='/register' element={<Register />} />
-          <Route path='/profile' element={<Profile />} />
+        <Route path='/profile' element={<Profile />} />
         <Route path='/login' element={<Login />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/' element={<Home />} />

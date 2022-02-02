@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Form, Button } from 'react-bootstrap'
 import axios from 'axios'
-import ButtonComponent from '../../components/ButtonComponent/ButtonComponent'
+import ButtonComponent from '../../components/ButtonCompnent/ButtonComponent'
 
 const Profile = () => {
 
