@@ -43,7 +43,7 @@ const Profile = () => {
   //   window.location =`/${body}` 
   // }
 
-  
+
 
 
   return (
@@ -52,9 +52,9 @@ const Profile = () => {
       <Form>
         <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
           <Form.Label>Note Url Goes here</Form.Label>
-          <Form.Control 
-          as="textarea" 
-          rows={3} 
+          <Form.Control
+            as="textarea"
+            rows={3}
             name='body'
             onChange={handleInputChange}
           />
@@ -66,19 +66,19 @@ const Profile = () => {
 
 
 
-     
+
       {
         noteState.notes.map(note =>
           <>
             <h2>Your study notes:</h2>
             <h6>Created on {note.createdAt.slice(0, -14)}</h6>
             <br />
-          
-            <a target="_blank" rel="noopener noreferrer" href={note.body}><ButtonComponent name={'Notes'}/> </a>
+
+            <a target="_blank" rel="noopener noreferrer" href={note.body}><ButtonComponent name={'Notes'} /> </a>
 
             <br />
             <br />
-         
+
 
 
             {/* this is how you need to write functions that take in parameters onClick */}
