@@ -49,7 +49,7 @@ const Home = () => {
             <div className="col-md-4">
               <div className="lofi1Button">
                 <TutorialModal />
-                <a href='/notes' target="_blank" > <ButtonComponent name={'Let ur ideas flow'}></ButtonComponent></a>
+                <a href='/studyNotes' target="_blank" > <ButtonComponent name={'Let ur ideas flow'}></ButtonComponent></a>
               </div>
             </div>
 
