@@ -67,7 +67,7 @@ const Profile = () => {
 
 
 
-      {
+      {/* {
         noteState.notes.map(note =>
           <>
             <h2>Your study notes:</h2>
@@ -79,10 +79,10 @@ const Profile = () => {
 
 
 
-            {/* this is how you need to write functions that take in parameters onClick */}
+            this is how you need to write functions that take in parameters onClick
           </>
         )
-      }
+      } */}
     </>
 
   )
