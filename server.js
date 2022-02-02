@@ -45,11 +45,6 @@ require('./db')
   .then(() => SERVER)
   .catch(err => console.log(err))
 
-// mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/lofiStudyRoom_db')
-// .then(() =>{
-//   console.log('connected')
-// })
-
 const io = require('socket.io')(SERVER, {
   cors: {
     origin: "https://stark-lowlands-08551.herokuapp.com",
